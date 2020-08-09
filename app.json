@@ -1,15 +1,11 @@
 {
   "expo": {
-    "name": "solution",
-    "slug": "solution",
+    "name": "setur-solution",
+    "description": "Solution for Setur assessment",
+    "slug": "setur-solution",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "icon": "./assets/img/icon/icon.png",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -17,10 +13,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "splash": {
+        "image": "./assets/img/splash-screen/ios/splash.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#E02726"
+      }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "android": {
+      "splash": {
+        "ldpi": "./assets/img/splash-screen/android/ldpi/splash.png",
+        "mdpi": "./assets/img/splash-screen/android/mdpi/splash.png",
+        "hdpi": "./assets/img/splash-screen/android/hdpi/splash.png",
+        "xhdpi": "./assets/img/splash-screen/android/xhdpi/splash.png",
+        "xxhdpi": "./assets/img/splash-screen/android/xxhdpi/splash.png",
+        "xxxhdpi": "./assets/img/splash-screen/android/xxxhdpi/splash.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#R02726"
+      }
     }
   }
 }
