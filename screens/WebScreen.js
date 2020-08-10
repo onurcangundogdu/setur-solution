@@ -1,9 +1,13 @@
 import React from 'react'
 import { WebView } from 'react-native-webview'
+import Header from '../components/Header'
 
-const WebScreen = props => {
+const WebScreen = () => {
   return (
-    <WebView source={{ uri: 'https://www.setur.com.tr/' }} />
+    <>
+      <Header title="Setur" />
+      <WebView source={{ uri: 'https://www.setur.com.tr/' }} />
+    </>
   )
 }
 

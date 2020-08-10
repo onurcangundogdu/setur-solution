@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { Text, StyleSheet, Button, ScrollView } from 'react-native'
 import axios from 'axios'
 import Input from '../components/Input'
+import Header from '../components/Header'
 import controls from '../controls.json'
 import { checkValidity } from '../helpers/checkValidity'
+import Colors from '../constants/colors'
 
 const SettingScreen = () => {
   const initialState = controls.controls.reduce((acc, cur) => {
@@ -30,24 +32,28 @@ const SettingScreen = () => {
   }
 
   return (
-    <ScrollView>
-      <Text>{controls.title}</Text>
-      {
-        controls.controls.map((input, index) => <Input 
-          key={index} 
-          type={input.type} 
-          caption={input.caption} 
-          items={input.items}
-          multiple={input.multiple}
-          value={formState[input.caption].value}
-          changeHandler={newValue => changeHandler(newValue, input.caption)}
-        />)
-      }
-      <Button title="Submit" onPress={submitHandler} />
-    </ScrollView>
+    <>
+      <Header title={controls.title} />
+      <ScrollView>
+        {
+          controls.controls.map((input, index) => <Input 
+            key={index} 
+            type={input.type} 
+            caption={input.caption} 
+            items={input.items}
+            multiple={input.multiple}
+            value={formState[input.caption].value}
+            changeHandler={newValue => changeHandler(newValue, input.caption)}
+          />)
+        }
+        <Button title="Submit" onPress={submitHandler} color={Colors.secondary} />
+      </ScrollView>
+    </>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+})
 
 export default SettingScreen

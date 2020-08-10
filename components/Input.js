@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, TextInput } from 'react-native'
+import Colors from '../constants/colors'
 
 const Input = ({ type, caption, items, multiple, value, changeHandler }) => {
   let renderedInput = null
@@ -11,6 +12,10 @@ const Input = ({ type, caption, items, multiple, value, changeHandler }) => {
         style={styles.textInput} 
         value={value} 
         onChangeText={changeHandler} 
+        blurOnSubmit
+        autoCapitalize='none'
+        autoCorrect={false}
+        keyboardType='email-address'
       />
       break
     default:
@@ -28,7 +33,7 @@ const styles = StyleSheet.create({
     marginVertical: 10
   },
   textInput: {
-    borderBottomColor: '#000',
+    borderBottomColor: Colors.dark,
     borderBottomWidth: 1,
     padding: 10
   },
