@@ -5,7 +5,7 @@
     "slug": "setur-solution",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/img/icon/icon.png",
+    "icon": "./assets/images/icons/icon.png",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -15,19 +15,19 @@
     "ios": {
       "supportsTablet": true,
       "splash": {
-        "image": "./assets/img/splash-screen/ios/splash.png",
+        "image": "./assets/images/splash-screen/ios/splash.png",
         "resizeMode": "cover",
         "backgroundColor": "#E02726"
       }
     },
     "android": {
       "splash": {
-        "ldpi": "./assets/img/splash-screen/android/ldpi/splash.png",
-        "mdpi": "./assets/img/splash-screen/android/mdpi/splash.png",
-        "hdpi": "./assets/img/splash-screen/android/hdpi/splash.png",
-        "xhdpi": "./assets/img/splash-screen/android/xhdpi/splash.png",
-        "xxhdpi": "./assets/img/splash-screen/android/xxhdpi/splash.png",
-        "xxxhdpi": "./assets/img/splash-screen/android/xxxhdpi/splash.png",
+        "ldpi": "./assets/images/splash-screen/android/ldpi/splash.png",
+        "mdpi": "./assets/images/splash-screen/android/mdpi/splash.png",
+        "hdpi": "./assets/images/splash-screen/android/hdpi/splash.png",
+        "xhdpi": "./assets/images/splash-screen/android/xhdpi/splash.png",
+        "xxhdpi": "./assets/images/splash-screen/android/xxhdpi/splash.png",
+        "xxxhdpi": "./assets/images/splash-screen/android/xxxhdpi/splash.png",
         "resizeMode": "cover",
         "backgroundColor": "#R02726"
       }
