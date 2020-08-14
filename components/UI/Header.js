@@ -1,29 +1,29 @@
 import React from 'react'
-import { View, Text, StyleSheet} from 'react-native'
-import Colors from '../constants/colors'
-import Fonts from '../constants/fonts'
+import { View, StyleSheet} from 'react-native'
+import CustomText from './CustomText'
+import Colors from '../../constants/colors'
+import Fonts from '../../constants/fonts'
 
 const Header = ({ title }) => {
   return (
     <View style={styles.header}>
-      <Text style={styles.title}>{title}</Text>
+      <CustomText style={styles.headerText}>{title}</CustomText>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   header: {
-    width: '100%',
     height: 80,
-    paddingTop: 30,
+    paddingTop: 20,
     backgroundColor: Colors.primary,
     alignItems: 'center',
     justifyContent: 'center'
   },
-  title: {
+  headerText: {
     color: Colors.white,
-    fontSize: 20,
-    fontFamily: Fonts.sourceBold
+    fontFamily: Fonts.sourceBold,
+    fontSize: 22
   }
 })
 

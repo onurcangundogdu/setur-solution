@@ -1,6 +1,6 @@
 import React from 'react'
 import { WebView } from 'react-native-webview'
-import Header from '../components/Header'
+import Header from '../components/UI/Header'
 
 const WebScreen = () => {
   return (
