@@ -12,17 +12,17 @@ const Input = ({ caption, value, changeHandler, isValid, isTouched, blurHandler 
   return <View style={styles.inputContainer}>
     <CustomText style={styles.label}>{caption}</CustomText>
     <TextInput 
-        placeholder={caption} 
-        style={styles.textInput} 
-        value={value} 
-        onChangeText={changeHandler}
-        onBlur={blurHandler}
-        blurOnSubmit
-        autoCapitalize='none'
-        autoCorrect={false}
-        keyboardType='email-address'
-      />
-      <CustomText style={styles.errorText}>{errorMessage}</CustomText>
+      placeholder={caption} 
+      style={styles.textInput} 
+      value={value} 
+      onChangeText={changeHandler}
+      onBlur={blurHandler}
+      blurOnSubmit
+      autoCapitalize='none'
+      autoCorrect={false}
+      keyboardType='email-address'
+    />
+    <CustomText style={styles.errorText}>{errorMessage}</CustomText>
   </View>
 }
 
