@@ -7,6 +7,7 @@ import controls from '../controls.json'
 import { checkValidity } from '../helpers/checkValidity'
 import Colors from '../constants/colors'
 import { API_URL } from '../constants/api'
+import whitespaces from '../constants/whitespaces'
 
 const getInitialState = () => controls.controls.reduce((acc, cur) => {
   acc[cur.caption] = { value: '', isValid: false, isTouched: false }
@@ -95,7 +96,7 @@ const SettingScreen = ({ navigation }) => {
   return (
     <>
       <Header title={controls.title} />
-      <ScrollView style={{margin: 20}}>
+      <ScrollView style={{margin: whitespaces.medium}}>
         {
           controls.controls.map((input, index) => {
             if(input.type === 'input') {
@@ -124,8 +125,10 @@ const SettingScreen = ({ navigation }) => {
             }
           })
         }
-        { requestRunning ? <ActivityIndicator size='small' color={Colors.primary} /> 
-            : <Button title="Submit" onPress={submitHandler} color={Colors.secondary} disabled={!isFormValid} /> }
+        { requestRunning 
+          ? <ActivityIndicator size='small' color={Colors.primary} /> 
+          : <Button title="Submit" onPress={submitHandler} color={Colors.secondary} disabled={!isFormValid} />
+        }
       </ScrollView>
     </>
   )

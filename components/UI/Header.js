@@ -2,7 +2,8 @@ import React from 'react'
 import { View, StyleSheet} from 'react-native'
 import CustomText from './CustomText'
 import Colors from '../../constants/colors'
-import Fonts from '../../constants/fonts'
+import { fontFamily, fontSize } from '../../constants/fonts'
+import whitespaces from '../../constants/whitespaces'
 
 const Header = ({ title }) => {
   return (
@@ -15,15 +16,15 @@ const Header = ({ title }) => {
 const styles = StyleSheet.create({
   header: {
     height: 80,
-    paddingTop: 20,
+    paddingTop: whitespaces.medium,
     backgroundColor: Colors.primary,
     alignItems: 'center',
     justifyContent: 'center'
   },
   headerText: {
     color: Colors.white,
-    fontFamily: Fonts.sourceBold,
-    fontSize: 22
+    fontFamily: fontFamily.sourceBold,
+    fontSize: fontSize.large
   }
 })
 

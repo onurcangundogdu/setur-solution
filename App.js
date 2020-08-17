@@ -7,7 +7,7 @@ import { AppLoading } from 'expo'
 import WebScreen from './screens/WebScreen'
 import SettingScreen from './screens/SettingScreen'
 import Colors from './constants/colors'
-import Fonts from './constants/fonts'
+import { fontFamily, fontSize } from './constants/fonts'
 import { Ionicons } from '@expo/vector-icons'
 
 const BottomTab = createBottomTabNavigator();
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   labelStyle: {
-    fontSize: 12,
-    fontFamily: Fonts.sourceBold
+    fontSize: fontSize.small,
+    fontFamily: fontFamily.sourceBold
   }
 })

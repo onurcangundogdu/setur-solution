@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, StyleSheet } from 'react-native'
-import Fonts from '../../constants/fonts'
+import { fontFamily, fontSize } from '../../constants/fonts'
 import Colors from '../../constants/colors'
 
 const CustomText = props => {
@@ -11,8 +11,8 @@ const CustomText = props => {
 
 const styles = StyleSheet.create({
   default: {
-    fontFamily: Fonts.source,
-    fontSize: 20,
+    fontFamily: fontFamily.source,
+    fontSize: fontSize.medium,
     color: Colors.black,
     letterSpacing: 0.5
   }

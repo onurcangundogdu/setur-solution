@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import {View, StyleSheet, TouchableOpacity, Platform, TouchableNativeFeedback, Modal, Button} from 'react-native'
 import CustomText from './CustomText'
 import Colors from '../../constants/colors'
-import Fonts from '../../constants/fonts'
+import { fontFamily, fontSize } from '../../constants/fonts'
+import whitespaces from '../../constants/whitespaces'
 import { Ionicons } from '@expo/vector-icons'
 
 const Select = ({ caption, value, changeHandler, isValid, isTouched, blurHandler, items, multiple }) => {
@@ -89,25 +90,25 @@ const Select = ({ caption, value, changeHandler, isValid, isTouched, blurHandler
 
 const styles = StyleSheet.create({
   inputContainer: {
-    marginVertical: 10
+    marginVertical: whitespaces.small
   },
   label: {
-    fontSize: 18
+    fontSize: fontSize.medium
   },
   errorText: {
     color: Colors.primary,
-    fontSize: 16
+    fontSize: fontSize.medium
   },
   captionAndArrowContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: 10
+    paddingVertical: whitespaces.small
   },
   value: {
-    fontSize: 14,
+    fontSize: fontSize.small,
     color: Colors.secondary,
-    fontFamily: Fonts.sourceBold
+    fontFamily: fontFamily.sourceBold
   },
   modal: {
     flex: 1,
@@ -115,21 +116,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   modalHeading: {
-    marginBottom: 50,
-    fontSize: 22
+    marginBottom: whitespaces.large,
+    fontSize: fontSize.large
   },
   select: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    marginBottom: 20
+    marginBottom: whitespaces.medium
   },
   selectValue: {
-    marginLeft: 20
+    marginLeft: whitespaces.medium
   },
   button: {
     width: 150,
-    marginTop: 30
+    marginTop: whitespaces.large
   }
 })
 

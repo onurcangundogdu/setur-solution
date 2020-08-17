@@ -2,6 +2,8 @@ import React from 'react'
 import { View, StyleSheet, TextInput } from 'react-native'
 import CustomText from './CustomText'
 import Colors from '../../constants/colors'
+import { fontSize } from '../../constants/fonts'
+import whitespaces from '../../constants/whitespaces'
 
 const Input = ({ caption, value, changeHandler, isValid, isTouched, blurHandler }) => {
   let errorMessage = ''
@@ -28,19 +30,19 @@ const Input = ({ caption, value, changeHandler, isValid, isTouched, blurHandler 
 
 const styles = StyleSheet.create({
   inputContainer: {
-    marginVertical: 10
+    marginVertical: whitespaces.small
   },
   label: {
-    fontSize: 18
+    fontSize: fontSize.medium
   },
   textInput: {
     borderBottomColor: Colors.dark,
     borderBottomWidth: 1,
-    padding: 10
+    padding: whitespaces.small
   },
   errorText: {
     color: Colors.primary,
-    fontSize: 16
+    fontSize: fontSize.medium
   }
 })
 
